@@ -13,29 +13,28 @@
 		\multicolumn{2}{|l|}{Users}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
+		/api/Users &
 		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
-		\hline
+        \hline
+        GET \newline
+		/api/Users/\{id\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Users/email/\{email\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
 		PUT \newline
-		/api/User/\{id\} &
+		/api/Users/\{id\} &
 		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
 		\hline
 		DELETE \newline
-		/api/User/\{id\} &
+		/api/Users/\{id\} &
 		Sletter den bruger, som er logget ind. \\
 		\hline
 		POST \newline
-		/api/User/ &
+		/api/Users &
 		Opretter en ny bruger. \\
-		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -43,7 +42,7 @@
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Authentication}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -51,29 +50,24 @@
 		\multicolumn{2}{|l|}{Authentication}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
+		/api/Authentication/\{id\} &
 		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
 		\hline
-		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
-		\hline
-		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
-		\hline
 		POST \newline
-		/api/User/ &
+		/api/Authentication/authenticate &
+		Opretter en ny bruger. \\
+        \hline
+        POST \newline
+		/api/Authentication/register &
+		Opretter en ny bruger. \\
+        \hline
+        PUT \newline
+		/api/Authentication/\{id\} &
 		Opretter en ny bruger. \\
 		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
+		DELETE \newline
+		/api/Authentication/\{id\} &
+		POST bærer anmodningsparameter, hvilket er en mere sikker måde at overføre data fra klient til server i http-protokol på. \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -81,7 +75,7 @@
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Audits}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -89,37 +83,39 @@
 		\multicolumn{2}{|l|}{Audits}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
+		/api/Audits &
 		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
-		\hline
-		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
-		\hline
-		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ &
-		Opretter en ny bruger. \\
-		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
+        \hline
+        GET \newline
+		/api/Audits/\{id\} &
+		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
+		\\
+        \hline
+        GET \newline
+		/api/Audits/\{id\} &
 		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
 		\\
 		\hline
+		PUT \newline
+		/api/Audits/email/\{email\} &
+		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
+		\hline
+		DELETE \newline
+		/api/Audits/\{id\} &
+		Sletter den bruger, som er logget ind. \\
+		\hline
+		POST \newline
+		/api/Audits &
+		Opretter en ny bruger. \\
+		\hline
+		
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Biddings}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -127,37 +123,41 @@
 		\multicolumn{2}{|l|}{Biddings}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		/api/Biddings &
+		Henter brugerens bud på et projekt. \\
+        \hline
+        GET \newline
+		/api/Biddings/freelancer/\{id\} &
+		Henter brugerens bud på et projekt. \\
+        \hline
+        GET \newline
+		/api/Biddings/project/\{projectId\} &
+		Henter brugerens bud på et projekt. \\
+        \hline
+        GET \newline
+		/api/Biddings/\{id\} &
+		Henter brugerens bud på et projekt. \\
 		\hline
 		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
+		/api/Biddings/\{bidId\} &
+		Opdaterer det bud som brugeren har indtastet til et projekt. \\
 		\hline
 		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
+		/api/Biddings/\{id\} &
+		Brugeren kan slette sit bud. \\
 		\hline
 		POST \newline
-		/api/User/ &
-		Opretter en ny bruger. \\
+		/api/Biddings &
+		Brugeren kan oprette et ny bud. \\
 		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
-		\hline
+	
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Collaborations}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -165,37 +165,30 @@
 		\multicolumn{2}{|l|}{Collaborations}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		/api/Collaborations &
+		Henter status på et projekt . \\
 		\hline
-		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
-		\hline
-		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ &
-		Opretter en ny bruger. \\
-		\hline
-		POST \newline
-		/api/User/ChangePassword &
+        GET \newline
+		/api/Collaborations/project/{projectId} &
 		Ændrer kodeordet for den bruger, som er logget ind. \\
 		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
+		GET \newline
+		/api/Collaborations/{id}/\{email\} &
 		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
 		\\
 		\hline
+		POST \newline
+		/api/Collaborations &
+		Opretter en ny bruger. \\
+		\hline
+	
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Files}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -203,65 +196,45 @@
 		\multicolumn{2}{|l|}{Files}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
+		/api/Profiles &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Profiles/\{id\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Profiles/user/\{userId\} &
 		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
 		\hline
 		PUT \newline
-		/api/User/\{id\} &
+		/api/Profiles/\{profileId\} &
 		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
 		\hline
 		DELETE \newline
-		/api/User/\{id\} &
+		/api/Profiles/\{id\} &
 		Sletter den bruger, som er logget ind. \\
 		\hline
 		POST \newline
-		/api/User/ &
+		/api/Profiles &
 		Opretter en ny bruger. \\
 		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
-		\hline
+	
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Payments}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
 		\rowcolor{gray!50}
 		\multicolumn{2}{|l|}{Payments}\\
 		\hline
-		GET \newline
-		/api/User/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
-		\hline
-		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
-		\hline
-		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
-		\hline
 		POST \newline
-		/api/User/ &
-		Opretter en ny bruger. \\
-		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
+		/api/Payments/deposit &
 		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
 		\\
 		\hline
@@ -271,7 +244,7 @@
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Profiles}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -279,37 +252,37 @@
 		\multicolumn{2}{|l|}{Profiles}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
+		/api/Profiles &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Profiles/\{id\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Profiles/user/\{userId\} &
 		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
 		\hline
 		PUT \newline
-		/api/User/\{id\} &
+		/api/Profiles/\{profileId\} &
 		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
 		\hline
 		DELETE \newline
-		/api/User/\{id\} &
+		/api/Profiles/\{id\} &
 		Sletter den bruger, som er logget ind. \\
 		\hline
 		POST \newline
-		/api/User/ &
+		/api/Profiles &
 		Opretter en ny bruger. \\
 		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
-		\hline
+		
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Projects}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -317,29 +290,40 @@
 		\multicolumn{2}{|l|}{Projects}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
+		/api/Projects &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Projects/employer/\{id\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Projects/freelancer/\{id\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Projects/user/\{userId\} &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Projects/open &
+		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+        \hline
+        GET \newline
+		/api/Projects/\{id\} &
 		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
 		\hline
 		PUT \newline
-		/api/User/\{id\} &
+		/api/Projects/\{id\} &
 		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
 		\hline
 		DELETE \newline
-		/api/User/\{id\} &
+		/api/Projects/\{id\} &
 		Sletter den bruger, som er logget ind. \\
 		\hline
 		POST \newline
-		/api/User/ &
+		/api/Projects &
 		Opretter en ny bruger. \\
-		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -347,7 +331,7 @@
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Chat}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -370,22 +354,14 @@
 		/api/User/ &
 		Opretter en ny bruger. \\
 		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
-		\hline
+	
 	\end{tabular}
 \end{table}
 
 \begin{table}[H]
 	\rowcolors{2}{gray!25}{white}
 	\centering
-	\caption{API addresser for User}
+	\caption{API addresser for Video chat}
 	\label{tab:web_user}
 	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
 		\hline
@@ -407,15 +383,6 @@
 		POST \newline
 		/api/User/ &
 		Opretter en ny bruger. \\
-		\hline
-		POST \newline
-		/api/User/ChangePassword &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ResetPassword/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
-		\\
 		\hline
 	\end{tabular}
 \end{table}
