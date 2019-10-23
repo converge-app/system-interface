@@ -357,32 +357,3 @@
 	
 	\end{tabular}
 \end{table}
-
-\begin{table}[H]
-	\rowcolors{2}{gray!25}{white}
-	\centering
-	\caption{API addresser for Video chat}
-	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
-		\hline
-		\rowcolor{gray!50}
-		\multicolumn{2}{|l|}{Video chat}\\
-		\hline
-		GET \newline
-		/api/User/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
-		\hline
-		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
-		\hline
-		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
-		\hline
-		POST \newline
-		/api/User/ &
-		Opretter en ny bruger. \\
-		\hline
-	\end{tabular}
-\end{table}
