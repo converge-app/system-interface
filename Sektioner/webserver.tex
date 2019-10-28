@@ -1,4 +1,6 @@
-\section{Web server}
+\chapter{Web server}
+
+\section{Indledning}
 Web serveren består af en række API'er, som bruges til at lagrer og udlevere data til brugeren. De opbevarede data kan webbrowsere hente via protokollen HTTP eller HTTPS. Den måde det fungere på er at en klient sender en HTTP-anmodning til serveren, serveren returnerer et svar til klienten. svaret kan indeholde oplysninger om den anmodning brugeren ønsker. 
 HTTP består af fire metoder:
  
@@ -9,16 +11,16 @@ HTTP består af fire metoder:
 	\item DELETE
   \end{itemize}
 
-\subsection{Web API}
+\section{Web API}
 Som nævnte før består Converge sytemet af en række API'er og disse API'er benyttes til at komunikere med web serveren. Nedenfor ses tabeller, der repræsentere de forskellige API'er, hvor der kan ses deres adresser og en beskrivelse af deres HTTP-anmodninger.
 
 \begin{table}[H]
 	\centering
 	\caption{API addresser for User}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Users}\\
+		\multicolumn{2}{l}{\textbf{Users}}\\
 		\hline
 		GET \newline
 		/api/Users &
@@ -51,9 +53,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Authentication}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Authentication}\\
+		\multicolumn{2}{l}{\textbf{Authentication}}\\
 		\hline
 		GET \newline
 		/api/Authentication/\{id\} &
@@ -84,9 +86,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Biddings}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Biddings}\\
+		\multicolumn{2}{l}{\textbf{Biddings}}\\
 		\hline
 		GET \newline
 		/api/Biddings &
@@ -124,9 +126,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Collaborations}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Collaborations}\\
+		\multicolumn{2}{l}{\textbf{Collaborations}}\\
 		\hline
 		GET \newline
 		/api/Collaborations &
@@ -153,9 +155,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Files}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Files}\\
+		\multicolumn{2}{l}{\textbf{Files}}\\
 		\hline
 		GET \newline
 		/api/Profiles &
@@ -189,9 +191,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Payments}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Payments}\\
+		\multicolumn{2}{l}{\textbf{Payments}}\\
 		\hline
 		POST \newline
 		/api/Payments/deposit &
@@ -205,9 +207,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Profiles}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Profiles}\\
+		\multicolumn{2}{l}{\textbf{Profiles}}\\
 		\hline
 		GET \newline
 		/api/Profiles &
@@ -241,9 +243,9 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Projects}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Projects}\\
+		\multicolumn{2}{l}{\textbf{Projects}}\\
 		\hline
 		GET \newline
 		/api/Projects &
@@ -288,24 +290,56 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 	\centering
 	\caption{API addresser for Chat}
 	\label{tab:web_user}
-	\begin{tabular}{|L{0.3\textwidth}|L{0.70\textwidth}|}
+	\begin{tabular}{p{5cm}|p{11cm}}
 		\hline
-		\multicolumn{2}{|l|}{Chat}\\
+		\multicolumn{2}{l}{\textbf{Chat}}\\
 		\hline
 		GET \newline
-		/api/User/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		/api/Chats &
+		 \\
 		\hline
-		PUT \newline
-		/api/User/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
+		GET \newline
+		/api/Chats/contacts &
+		 \\
 		\hline
-		DELETE \newline
-		/api/User/\{id\} &
-		Sletter den bruger, som er logget ind. \\
+		GET \newline
+		/api/Chats/contacts/\{contactId\} &
+		 \\
+		\hline
+		GET \newline
+		/api/Chats/\{id\} &
+		 \\
+		\hline
+		GET \newline
+		/api/Chats/contacts/user/\{userId\} &
+		 \\
 		\hline
 		POST \newline
-		/api/User/ &
+		/api/Chats &
+		Opretter en ny bruger. \\
+		\hline
+		POST \newline
+		/api/Chats/contacts &
+		Opretter en ny bruger. \\
+		\hline
+	
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{API addresser for Audit}
+	\label{tab:web_user}
+	\begin{tabular}{p{5cm}|p{11cm}}
+		\hline
+		\multicolumn{2}{l}{\textbf{Audit}}\\
+		\hline
+		GET \newline
+		/api/Audit/user/\{userId\} & Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		\hline
+		POST \newline
+		/api/Audit &
 		Opretter en ny bruger. \\
 		\hline
 	
