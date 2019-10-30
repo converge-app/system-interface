@@ -25,7 +25,7 @@ for path in paths:
     pathPdf = path['full-path-without-ext'] + ".pdf"
     print('  source: ', pathSvg)
     print('  dest:   ', pathPdf)
-    os.system(f'inkscape -D -z --file={pathSvg} --export-pdf={pathPdf}')
+    os.system(f'inkscape -C -z --file={pathSvg} --export-pdf={pathPdf}')
     if os.path.exists(pathPdf):
         print(colored('  ok!', 'green'))
     else:
