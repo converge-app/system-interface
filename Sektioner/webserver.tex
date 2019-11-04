@@ -24,23 +24,23 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Users &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter brugeren \\
         \hline
         GET \newline
 		/api/Users/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter brugeren med det givne id \\
         \hline
         GET \newline
 		/api/Users/email/\{email\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter brugeren med det givne email\\
         \hline
 		PUT \newline
 		/api/Users/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
+		Opdaterer brugerinformationer omkring den bruger, som er logget ind med et givne id. \\
 		\hline
 		DELETE \newline
 		/api/Users/\{id\} &
-		Sletter den bruger, som er logget ind. \\
+		Sletter den bruger, som er logget ind, med et givne id. \\
 		\hline
 		POST \newline
 		/api/Users &
@@ -59,7 +59,7 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Authentication/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter brugeren med det givne id\\
 		\hline
 		POST \newline
 		/api/Authentication/authenticate &
@@ -75,7 +75,7 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		DELETE \newline
 		/api/Authentication/\{id\} &
-		POST bærer anmodningsparameter, hvilket er en mere sikker måde at overføre data fra klient til server i http-protokol på. \\
+		POST bærer anmodningsparameter,  \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -96,23 +96,23 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
         \hline
         GET \newline
 		/api/Biddings/freelancer/\{id\} &
-		Henter brugerens bud på et projekt. \\
+		Henter brugerens bud på et projekt med et givne id. \\
         \hline
         GET \newline
 		/api/Biddings/project/\{projectId\} &
-		Henter brugerens bud på et projekt. \\
+		Henter prjectet med et givne id. \\
         \hline
         GET \newline
 		/api/Biddings/\{id\} &
-		Henter brugerens bud på et projekt. \\
+		Henter brugerens bud på et projekt med givne id. \\
 		\hline
 		PUT \newline
 		/api/Biddings/\{bidId\} &
-		Opdaterer det bud som brugeren har indtastet til et projekt. \\
+		Opdaterer det bud som brugeren har indtastet til et projekt med et givne id. \\
 		\hline
 		DELETE \newline
 		/api/Biddings/\{id\} &
-		Brugeren kan slette sit bud. \\
+		Brugeren kan slette sit bud med et givne id. \\
 		\hline
 		POST \newline
 		/api/Biddings &
@@ -132,20 +132,20 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Collaborations &
-		Henter status på et projekt . \\
+		Henter status på et projekt. \\
 		\hline
         GET \newline
 		/api/Collaborations/project/{projectId} &
-		Ændrer kodeordet for den bruger, som er logget ind. \\
+		Henter status/information på et projekt med et givne id. \\
 		\hline
 		GET \newline
 		/api/Collaborations/{id}/\{email\} &
-		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind. 
+		Sender et ønske om at få tilsendt en email til at få ændret sit kodeord, uden at være logget ind.
 		\\
 		\hline
 		POST \newline
 		/api/Collaborations &
-		Opretter en ny bruger. \\
+		Opretter en ny project samtale mellem bruger. \\
 		\hline
 	
 	\end{tabular}
@@ -160,28 +160,20 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\multicolumn{2}{l}{\textbf{Files}}\\
 		\hline
 		GET \newline
-		/api/Profiles &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		/api/Files &
+		Henter filen  \\
         \hline
         GET \newline
-		/api/Profiles/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		/api/Files/\{id\} &
+		Henter filen med et givne id. \\
         \hline
         GET \newline
-		/api/Profiles/user/\{userId\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
-		\hline
-		PUT \newline
-		/api/Profiles/\{profileId\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
-		\hline
-		DELETE \newline
-		/api/Profiles/\{id\} &
-		Sletter den bruger, som er logget ind. \\
+		/api/Files/user/\{userId\} &
+		Henter filen med et givne bruger id. \\
 		\hline
 		POST \newline
-		/api/Profiles &
-		Opretter en ny bruger. \\
+		/api/Files &
+		tilføje en fil. \\
 		\hline
 	
 	\end{tabular}
@@ -213,27 +205,27 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Profiles &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter profil. \\
         \hline
         GET \newline
 		/api/Profiles/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter profil med et givne id. \\
         \hline
         GET \newline
 		/api/Profiles/user/\{userId\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter profil \\
 		\hline
 		PUT \newline
 		/api/Profiles/\{profileId\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
+		Opdaterer profil med et givne profil id. \\
 		\hline
 		DELETE \newline
 		/api/Profiles/\{id\} &
-		Sletter den bruger, som er logget ind. \\
+		Sletter profil med et givne id. \\
 		\hline
 		POST \newline
 		/api/Profiles &
-		Opretter en ny bruger. \\
+		Opretter en profil. \\
 		\hline
 		
 	\end{tabular}
@@ -249,39 +241,39 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Projects &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter  \\
         \hline
         GET \newline
 		/api/Projects/employer/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter  \\
         \hline
         GET \newline
 		/api/Projects/freelancer/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter  \\
         \hline
         GET \newline
 		/api/Projects/user/\{userId\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter  \\
         \hline
         GET \newline
 		/api/Projects/open &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter  \\
         \hline
         GET \newline
 		/api/Projects/\{id\} &
-		Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		Henter  \\
 		\hline
 		PUT \newline
 		/api/Projects/\{id\} &
-		Opdaterer brugerinformationer omkring den bruger, som er logget ind. \\
+		Opdaterer  \\
 		\hline
 		DELETE \newline
 		/api/Projects/\{id\} &
-		Sletter den bruger, som er logget ind. \\
+		Sletter  \\
 		\hline
 		POST \newline
 		/api/Projects &
-		Opretter en ny bruger. \\
+		Opretter  \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -296,31 +288,31 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Chats &
-		 \\
+		 Henter \\
 		\hline
 		GET \newline
 		/api/Chats/contacts &
-		 \\
+		Henter \\
 		\hline
 		GET \newline
 		/api/Chats/contacts/\{contactId\} &
-		 \\
+		Henter \\
 		\hline
 		GET \newline
 		/api/Chats/\{id\} &
-		 \\
+		HenterHenter \\
 		\hline
 		GET \newline
 		/api/Chats/contacts/user/\{userId\} &
-		 \\
+		Henter \\
 		\hline
 		POST \newline
 		/api/Chats &
-		Opretter en ny bruger. \\
+		Opretter  \\
 		\hline
 		POST \newline
 		/api/Chats/contacts &
-		Opretter en ny bruger. \\
+		Opretter \\
 		\hline
 	
 	\end{tabular}
@@ -336,11 +328,34 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\multicolumn{2}{l}{\textbf{Audit}}\\
 		\hline
 		GET \newline
-		/api/Audit/user/\{userId\} & Henter brugeren med det givne id, er id'et sat til -1 vil den bruger der er logget ind med, returneres. \\
+		/api/Audit/user/\{userId\} & Henter  \\
 		\hline
 		POST \newline
 		/api/Audit &
-		Opretter en ny bruger. \\
+		Opretter \\
+		\hline
+	
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{API addresser for Broker}
+	\label{tab:web_user}
+	\begin{tabular}{p{5cm}|p{11cm}}
+		\hline
+		\multicolumn{2}{l}{\textbf{Broker}}\\
+		POST \newline
+		/api/Broker/initialize &
+		Opretter  \\
+		\hline
+		POST \newline
+		/api/Broker/pay &
+		Opretter  \\
+		\hline
+		POST \newline
+		/api/Broker/complete &
+		Opretter \\
 		\hline
 	
 	\end{tabular}
