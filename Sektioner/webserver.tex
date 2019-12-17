@@ -194,7 +194,7 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 	\end{tabular}
 \end{table}
-
+\newpage
 \begin{table}[H]
 	\centering
 	\caption{API addresser for Profiles}
@@ -240,44 +240,35 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\multicolumn{2}{l}{\textbf{Projects}}\\
 		\hline
 		GET \newline
-		/api/Projects &
-		Henter  \\
+		/api/Projects & Henter alle projekter.\\
         \hline
         GET \newline
-		/api/Projects/employer/\{id\} &
-		Henter  \\
+		/api/Projects/employer/\{id\} & Henter specifik projekt vha. en ID. \\
         \hline
         GET \newline
-		/api/Projects/freelancer/\{id\} &
-		Henter  \\
+		/api/Projects/freelancer/\{id\} & Henter projektet ved hjælp af freelancerens ID \\
         \hline
         GET \newline
-		/api/Projects/user/\{userId\} &
-		Henter  \\
+		/api/Projects/user/\{userId\} & Henter projektet på et givne bruger ID.\\
         \hline
         GET \newline
-		/api/Projects/open &
-		Henter  \\
+		/api/Projects/open & Henter projektet og åbner det.\\
         \hline
         GET \newline
-		/api/Projects/\{id\} &
-		Henter  \\
+		/api/Projects/\{id\} & Henter projektet ud fra ID.\\
 		\hline
 		PUT \newline
-		/api/Projects/\{id\} &
-		Opdaterer  \\
+		/api/Projects/\{id\} & Opdaterer projektet med et givne id \\
 		\hline
 		DELETE \newline
-		/api/Projects/\{id\} &
-		Sletter  \\
+		/api/Projects/\{id\} & Sletter projektet med et givne id. \\
 		\hline
 		POST \newline
-		/api/Projects &
-		Opretter  \\
+		/api/Projects & Opretter projekt.\\
 		\hline
 	\end{tabular}
 \end{table}
-
+\newpage
 \begin{table}[H]
 	\centering
 	\caption{API addresser for Chat}
@@ -288,31 +279,31 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		GET \newline
 		/api/Chats &
-		 Henter \\
+		 Henter chatten.\\
 		\hline
 		GET \newline
 		/api/Chats/contacts &
-		Henter \\
+		Henter alle brugerens kontakter\\
 		\hline
 		GET \newline
 		/api/Chats/contacts/\{contactId\} &
-		Henter \\
+		Henter en kontakt med et fælles contactId\\
 		\hline
 		GET \newline
 		/api/Chats/\{id\} &
-		HenterHenter \\
+		Henter chat indhold med et givne i-d \\
 		\hline
 		GET \newline
 		/api/Chats/contacts/user/\{userId\} &
-		Henter \\
+		Henter kontakten med et givne userId\\
 		\hline
 		POST \newline
 		/api/Chats &
-		Opretter  \\
+		Opretter en besked \\
 		\hline
 		POST \newline
 		/api/Chats/contacts &
-		Opretter \\
+		Opretter en bruger som kontakt\\
 		\hline
 	
 	\end{tabular}
@@ -328,11 +319,11 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\multicolumn{2}{l}{\textbf{Audit}}\\
 		\hline
 		GET \newline
-		/api/Audit/user/\{userId\} & Henter  \\
+		/api/Audit/user/\{userId\} & Henter  rapport på en bruger\\
 		\hline
 		POST \newline
 		/api/Audit &
-		Opretter \\
+		Opretter rapport på en bruger\\
 		\hline
 	
 	\end{tabular}
@@ -351,11 +342,11 @@ Som nævnte før består Converge sytemet af en række API'er og disse API'er be
 		\hline
 		POST \newline
 		/api/Broker/pay &
-		Opretter  \\
+		At en betaling er oprettet\\
 		\hline
 		POST \newline
 		/api/Broker/complete &
-		Opretter \\
+		Sørge for at tingene er gennemført\\
 		\hline
 	
 	\end{tabular}
